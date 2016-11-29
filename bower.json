@@ -1,0 +1,27 @@
+{
+  "name": "Edentic Base Project",
+  "version": "1.0",
+  "description": "Base project bower requirements",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fastclick": "*",
+    "jquery": "~1.11.*",
+    "bourbon": "~4.2.2"
+  },
+  "overrides": {
+    "modernizr": {
+      "main": "modernizr.js"
+    }
+  },
+  "resolutions": {
+    "jquery": "~1.11.*"
+  }
+}

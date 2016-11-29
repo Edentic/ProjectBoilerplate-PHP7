@@ -1,0 +1,35 @@
+---
+ip: "192.168.57.10"
+memory: 1024
+cpus: 1
+version: "0.4.4"
+
+composer: false
+laravel: false
+wordpress: false
+mailcatcher: false
+selenium: false
+yarn_install: false
+bower_install: false
+run_gulp: false
+
+authorize: ~/.ssh/id_rsa.pub
+
+keys:
+    - ~/.ssh/id_rsa
+
+folders:
+    - map: ./
+      to: /home/vagrant/Code
+
+sites:
+    - map: 192.168.*
+      to: /home/vagrant/Code/public
+
+variables:
+    - key: APP_ENV
+      value: local
+
+databases:
+  - homestead
+  - test_db

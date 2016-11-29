@@ -1,0 +1,33 @@
+input {
+  //Layout
+  width:auto;
+  padding: 0 0.3em;
+  border-radius: $r;
+
+  //Typography
+  font-family: $font-standard;
+
+  //Color
+  Color: $black;
+  background: $white;
+  border: 1px solid $black;
+
+  //Interaction
+  cursor: pointer;
+  outline: none;
+  transition: all 100ms ease;
+
+  &:hover {
+    //Layout
+    //Typography
+    //Color
+    //Interaction
+  }
+
+  &:focus {
+    //Layout
+    //Typography
+    //Color
+    //Interaction
+  }
+}

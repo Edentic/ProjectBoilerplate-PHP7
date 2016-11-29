@@ -1,0 +1,86 @@
+.label-radio {
+  position: relative;
+
+  label {
+    width: 100%;
+    margin: 0;
+    padding: 1em;
+    font-size:1em;
+    color: rgba($black,0.5);
+    display: block;
+    cursor:pointer;
+    transition: background 350ms ease;
+    box-sizing: border-box;
+
+    &:hover {
+      color: $black;
+    }
+
+    span {
+      pointer-events: none;
+      display:block;
+      position:absolute;
+      top: 1em;
+      right: 1em;
+    }
+
+    .circle {
+      top:0;right:-1.75em;bottom:0;left:auto;
+      margin: auto;
+      background:transparent;
+      height:80px;
+      width:80px;
+      z-index:1;
+      border-radius:50%;
+    }
+
+    .outer-circle {
+      border:1px solid $black;
+      height:20px;
+      width:20px;
+      z-index:888;
+      border-radius: 100%;
+      top:0;right:0;bottom:0;left:auto;
+      margin: auto;
+      transition: border 150ms ease;
+    }
+
+    .inner-circle {
+      background: $black;
+      height:12px;
+      width:12px;
+      z-index:888;
+      border-radius: 100%;
+      opacity: 0;
+      top:0;right:0.3em;bottom:0;left:auto;
+      margin: auto;
+      transform: scale(0.1);
+      transition: transform 150ms ease, opacity 150ms ease;
+    }
+  }
+
+  input {
+    display:none;
+
+    &:checked ~ label {
+      color: $black;
+      transition: color 300ms ease;
+
+      .circle {
+        animation: grow-circle 350ms ease;
+      }
+
+      .outer-circle {
+        border-color: $positive;
+        transition: border 150ms ease;
+      }
+
+      .inner-circle {
+        opacity: 1;
+        background: $positive;
+        transform: scale(1);
+        transition: transform 150ms ease, opacity 150ms ease;
+      }
+    }
+  }
+}

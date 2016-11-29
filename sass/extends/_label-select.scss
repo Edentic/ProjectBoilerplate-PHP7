@@ -1,0 +1,36 @@
+.label-select {
+
+  label {
+    margin: 1em 0 0.2em;
+    font-size: 0.9em;
+    color: rgba($black,0.5);
+    display: block;
+  }
+
+  select  {
+    margin-top: 0.3em;
+    border: 1px solid rgba($black,0.2);
+    font-size: 0.9em;
+    border-radius: 0;
+    padding: 0.5em;
+    height: 2em;
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+  }
+
+  select:hover {
+    border-color: rgba($black,0.5);
+    background: rgba($black,0.1);
+  }
+  select:focus {
+    border-bottom: 1px solid $black;
+    color: $black;
+    background: rgba($black,0.1);
+  }
+  select:focus:hover {
+    border-bottom: 1px solid $black;
+    color: $positive;
+    background: rgba($positive,0.1);
+  }
+}

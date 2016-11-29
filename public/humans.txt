@@ -1,0 +1,30 @@
+
+/* TEAM */
+
+Kasper Baagø Jensen                        
+kasper@edentic.dk                           
+Twitter: @kasperbaago.                          
+Location: Odense, Denmark.
+Visit me at http://edentic.dk
+                            
+Frederik Stahlfest Møller                        
+frederik@edentic.dk                           
+Twitter: @stahlfest.                          
+Location: Odense, Denmark.
+Visit me at http://edentic.dk
+
+							
+/* THANKS */
+
+Edentic ApS             
+
+                            
+/* SITE */
+                            
+Standards: 
+                            
+Components: 
+
+CMS: 
+                        
+Software: 

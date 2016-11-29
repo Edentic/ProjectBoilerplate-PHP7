@@ -1,0 +1,12 @@
+a {
+  font-family:$font-standard;
+  text-decoration: none;
+  outline: 0;
+
+  &:hover {
+  }
+
+  &.tel {
+    color: inherit;
+  }
+}

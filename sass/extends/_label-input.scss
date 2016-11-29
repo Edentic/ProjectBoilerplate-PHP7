@@ -1,0 +1,46 @@
+.label-input {
+
+  label {
+    margin: 1em 0 0.2em;
+    font-size: 0.9em;
+    color: rgba($black,0.5);
+    display: block;
+  }
+
+  input, textarea  {
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-bottom: 1px solid rgba($black,0.2);
+    font-size: 0.9em;
+    border-radius: 0;
+    padding-left: 0;
+  }
+
+  input:hover {
+    border-bottom: 1px solid rgba($black,0.5);
+  }
+  input:focus {
+    border-bottom: 1px solid rgba($black,0.8);
+    color: rgba($black,0.8);
+  }
+  input:focus:hover {
+    border-bottom: 1px solid $black;
+    color: $black;
+    background: rgba($black,0.1);
+  }
+
+  input.ng-touched { //Input er blevet ændret
+
+    &.ng-invalid { //Input er ikke korrekt angivet
+
+    }
+
+    &.ng-valid:focus { //Input er korrekt og i fokus
+
+    }
+
+    &.ng-valid { //Input er korrekt
+    }
+  }
+}
