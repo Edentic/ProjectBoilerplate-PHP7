@@ -1,13 +1,16 @@
-/* Color vars */
+// Base colors
 $black:#000;
-$white:#FCFAF5;
-$font-color:#000;
-$font-bold-color:#3D3C3A;
-$grey-light:#CFCECA;
+$white:#fff;
 
 // Client colors
+$brand-color: #f46360;
+$grey-light:#ccc;
 
-// Organic colors
+// Font colors
+$font-color:#1a1a1a;
+$font-bold-dark:#3a4a4a;
+
+// System colors
 $positive:#5aa253;
 $negative:#e75858;
 $informative:#1e88c5;
@@ -17,6 +20,20 @@ $warning:#e7a713;
 $r:4px;
 $r-btn:6px;
 
-/* Font family settings */
+// Font family settings
 $font-standard: 'Arial', sans-serif;
 $font-bold: sans-serif;
+
+// border radius
+$r:2px;
+$r-table:5px;
+$r-btn:8px;
+
+// remove mobile menu breakpoint
+$smallMobileBreakpoint: 330;
+$mobileBreakpoint: 600;
+$removeMobileMenuBreakPoint: 900;
+$largeBreakpoint: 1200;
+
+// Shadows
+$block-shadow: 0 2px 4px rgba($font-color, 0.05);
