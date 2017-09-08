@@ -9,9 +9,10 @@ laravel: false
 wordpress: false
 mailcatcher: false
 selenium: false
-yarn_install: false
+
+yarn_install: true
+run_gulp: true
 bower_install: false
-run_gulp: false
 
 authorize: ~/.ssh/id_rsa.pub
 
@@ -25,10 +26,6 @@ folders:
 sites:
     - map: 192.168.*
       to: /home/vagrant/Code/public
-
-variables:
-    - key: APP_ENV
-      value: local
 
 databases:
   - homestead

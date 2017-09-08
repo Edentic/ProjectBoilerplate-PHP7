@@ -4,7 +4,6 @@ var gulp = require('gulp'),
     minifyCSS = require('gulp-cssnano'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
-    exec = require('gulp-exec'),
     sass = require('gulp-sass'),
     imagemin = require('gulp-imagemin'),
     gulpBowerFiles = require('main-bower-files'),
@@ -61,12 +60,12 @@ gulp.task('vuejs', function() {
     b.plugin('bundlify-scss', {
       output: sassComponentFile
     });
-    b.transform('babelify', {presets: ["latest"]});
+    b.transform('babelify', {presets: ["env"]});
 
     return [b, item.output];
   });
 
-  es.merge(combines.map(function(item, key) {
+  return es.merge(combines.map(function(item, key) {
     var combineArr = [ ];
     if(production) {
       combineArr = [
@@ -96,7 +95,7 @@ gulp.task('vuejs', function() {
   }));
 });
 
-gulp.task('bower', function() {
+gulp.task('bower', ['update'], function() {
   var bowerFlow = gulp.src(gulpBowerFiles({debugging: !production}))
       .pipe(filter).on('error', handleError)
       .pipe(concat('bower.js')).on('error', handleError);
@@ -121,7 +120,7 @@ gulp.task('jssrc', function() {
 });
 
 gulp.task('js', [
-  'bower',
+  //'bower',
   //'vuejs',
   'jssrc'
 ]);
@@ -131,9 +130,9 @@ gulp.task('compass', function() {
       .pipe(sass()).on('error', handleError)
       .pipe(prefix({ cascade: true }));
 
-  //if(production) {
-  sassFLow.pipe(minifyCSS());
-  //}
+  if(production) {
+    sassFLow.pipe(minifyCSS());
+  }
 
   return sassFLow.pipe(gulp.dest(cssDir))
       .pipe(livereload());
@@ -149,13 +148,12 @@ gulp.task('imageoptim', function() {
 
 gulp.task('watch', function() {
   livereload.listen();
-  gulp.watch(scssDir + '**/**.scss', ['compass']);
-  gulp.watch(['resources/assets/js/*.js', 'resources/components/**.vue', 'resources/components/**/**.vue'], ['vuejs']);
+  gulp.watch([scssDir + '**/**.scss', 'resources/assets/js/components/**/**.scss'], ['compass']);
+  gulp.watch(['resources/assets/js/*.js', 'resources/assets/js/components/**.vue', 'resources/assets/js/components/**/**.vue'], ['vuejs']);
   gulp.watch(['jsSrc/*.js'], ['jssrc']);
 });
 
 gulp.task('default', ['setProduction'], function(callback) {
-  return runSequence('update',
-      ['js', 'compass', 'imageoptim'],
+  return runSequence(['js', 'imageoptim'], ['compass'],
       callback);
 });

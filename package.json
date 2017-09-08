@@ -1,12 +1,14 @@
 {
-    "name": "EdenticProjectBoilerplate",
-    "description": "Boilerplate for Edentic projects",
-    "repository": "git@github.com:Edentic/ProjectBoilerplate.git",
+  "name": "EdenticProjectBoilerplate",
+  "description": "Boilerplate for Edentic projects",
+  "license": "MIT",
+  "repository": "git@github.com:Edentic/ProjectBoilerplate.git",
   "dependencies": {
     "aliasify": "^2.1.0",
-    "babel": "^6.5.2",
     "babel-cli": "^6.18.0",
-    "babel-preset-latest": "^6.16.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
     "babelify": "^7.3.0",
     "browserify": "^13.1.1",
     "bundlify-scss": "^0.0.1",
@@ -14,7 +16,6 @@
     "gulp-autoprefixer": "~2.3.*",
     "gulp-concat": "2.6.*",
     "gulp-cssnano": "~2.0.*",
-    "gulp-exec": "~2.1.*",
     "gulp-filter": "~2.0.*",
     "gulp-imagemin": "~2.3.*",
     "gulp-livereload": "~3.8.*",
@@ -28,10 +29,8 @@
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "vue": "^2.0.8",
-    "vue-material": "^0.3.1",
-    "vue-resource": "^1.0.3",
-    "vue-spinner": "^1.0.2",
-    "vueify": "^9.3.0"
+    "vueify": "^9.3.0",
+    "bourbon": "~4.2.2"
   },
   "aliasify": {
     "aliases": {

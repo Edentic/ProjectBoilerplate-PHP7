@@ -11,3 +11,4 @@ nginx.conf
 vendor/
 public/js
 public/css
+yarn.lock

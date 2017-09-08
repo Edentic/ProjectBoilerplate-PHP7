@@ -1,6 +1,5 @@
 /* MAIN MIXIN FILE */
-@import "../bower_components/bourbon/app/assets/stylesheets/functions/shade";
-@import "../bower_components/bourbon/app/assets/stylesheets/functions/tint";
+
 
 /* Media Query mixin */
 @mixin mq($width, $type:'min') {
