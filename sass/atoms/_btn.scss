@@ -1,0 +1,85 @@
+.btn {
+  //Layout
+  margin: 0;
+  padding: 0.8em 1.1em;
+  border-radius: $r-btn;
+  border: none;
+  -webkit-appearance: none;
+  position: relative;
+  overflow: hidden;
+
+  //Typography
+  font-family: $font-cta;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @include mq($mobileBreakpoint) {
+    font-size: 0.9em;
+    padding: 1em 1.5em;
+    min-width: 8em;
+  }
+
+  //Color
+  color: $white;
+  background: $brand-color;
+
+  //Interaction
+  cursor: pointer;
+  outline: none;
+  transition: color 1s ease;
+
+  &:hover {
+    background: shade($brand-color, 8%);
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+
+  &.btn--alt {
+    background: $grey-dark;
+
+    &:hover {
+      background: shade($grey-dark, 8%);
+    }
+  }
+
+  &.btn--negative {
+    background: $negative;
+
+    &:hover {
+      background: shade($negative, 8%);
+    }
+  }
+
+
+  &.btn--loading {
+    position: relative;
+    color: rgba($white,0);
+    transition: color 350ms ease;
+    cursor: wait;
+
+    &:after {
+      width: 2em;
+      height: 2em;
+      //background: url("../assets/img/icons/icon-loading.png") 100%/cover;
+      opacity: 1;
+      animation: spinner 1s linear infinite;
+      transition: opacity 350ms ease;
+    }
+  }
+}

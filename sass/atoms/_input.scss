@@ -8,9 +8,9 @@ input {
   font-family: $font-standard;
 
   //Color
-  Color: $black;
+  Color: $font-color;
   background: $white;
-  border: 1px solid $black;
+  border: 1px solid $border-color;
 
   //Interaction
   cursor: pointer;
