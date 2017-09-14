@@ -21,10 +21,10 @@ sudo mv phpunit.phar /usr/local/bin/phpunit
 sudo phpunit --version
 
 echo "** INSTALLING YARN **"
-sudo apt-key adv --keyserver pgp.mit.edu --recv D101F7899D41F3C3
-echo "deb http://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 sudo apt-get update
-sudo apt-get install yarn
+sudo apt-get install yarn -y
 
 echo "** SPEEDING UP DB **"
 sudo echo "innodb_flush_log_at_trx_commit = 2" >> /etc/mysql/my.cnf
