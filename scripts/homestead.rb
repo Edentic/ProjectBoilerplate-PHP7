@@ -280,15 +280,9 @@ class Homestead
         end
     end
 
-    if settings["composer"] == true
-        config.vm.provision "shell", run: "always" do |s|
-            s.inline = "cd /home/vagrant/Code/ && composer install"
-        end
-    end
-
     if settings["laravel"] == true
         config.vm.provision "shell" do |s|
-            s.inline = "cd /home/vagrant/Code/ && cp -n .env.local .env && php artisan key:generate"
+            s.inline = "bash /vagrant/scripts/setup_laravel.sh"
         end
 
         config.vm.provision "shell", run: "always" do |s|
@@ -297,6 +291,12 @@ class Homestead
 
         config.vm.provision "shell" do |s|
           s.inline = "cp /vagrant/scripts/laravel-worker.conf /etc/supervisor/conf.d/laravel-worker.conf"
+        end
+    end
+
+    if settings["composer"] == true
+        config.vm.provision "shell", run: "always" do |s|
+            s.inline = "cd /home/vagrant/Code/ && composer install"
         end
     end
 
