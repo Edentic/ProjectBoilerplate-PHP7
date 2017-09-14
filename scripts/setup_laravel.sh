@@ -11,8 +11,8 @@ else
     cp -nr /home/vagrant/laravel_install/* ./
     rm -r /home/vagrant/laravel_install/
     rm -rf ./Code
-    rm -rf ./local
-    rm -rf ./ssh
+    rm -rf ./.local
+    rm -rf ./.ssh
     rm  -f ./.bashrc
     rm  -f ./.hhvm.hhbc
     rm  -f ./.profile
