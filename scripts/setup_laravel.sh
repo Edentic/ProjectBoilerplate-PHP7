@@ -16,5 +16,5 @@ else
     rm  -f ./.bashrc
     rm  -f ./.hhvm.hhbc
     rm  -f ./.profile
-    rm  -f ./vbox_version
+    rm  -f ./.vbox_version
 fi
