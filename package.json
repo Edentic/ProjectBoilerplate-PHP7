@@ -29,8 +29,7 @@
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "vue": "^2.0.8",
-    "vueify": "^9.3.0",
-    "bourbon": "~4.2.2"
+    "vueify": "^9.3.0"
   },
   "aliasify": {
     "aliases": {
