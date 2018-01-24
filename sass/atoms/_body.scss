@@ -2,9 +2,20 @@
 
 html, body {
   overflow-x: hidden;
+  width: 100%;
 }
 
 body {
   margin: 0;
   background: $white;
+
+  &.noScroll {
+    height: 100%;
+    overflow: hidden;
+
+    @include mq($removeMobileMenuBreakPoint) {
+      height: auto;
+      overflow-y: auto;
+    }
+  }
 }
