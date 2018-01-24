@@ -34,6 +34,16 @@
   }
 }
 
+//Shade function
+@function shade($color, $percent) {
+  @return mix(#000, $color, $percent);
+}
+
+//Tint function
+@function tint($color, $percent) {
+  @return mix(#fff, $color, $percent);
+}
+
 @mixin btn($btn-color) {
   //Layout
   display: block;
