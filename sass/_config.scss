@@ -3,14 +3,17 @@ $black:#000;
 $white:#fff;
 
 // Client colors
-$brand-color: #f46360;
-$grey-light:#ccc;
-$grey-light:#4d4d4d;
-$border-color:#dcdcdc;
+$brand-color: #1337ff;
+$brand-color-2: tint($brand-color, 20%);
+$grey: #f5f5f5;
+$grey-light: #ededed;
+$grey-dark: #333;
+$border-color:#d5d5d5;
 
 // Font colors
-$font-color:#1a1a1a;
-$font-bold-dark:#3a4a4a;
+$font-color: #393939;
+$grey-light-light: #666;
+$font-color-dark: #2a2a2a;
 
 // System colors
 $positive:#5aa253;
@@ -18,7 +21,10 @@ $negative:#e75858;
 $informative:#1e88c5;
 $warning:#e7a713;
 
-/* border radius */
+// Gradients
+$brand-gradient: linear-gradient(90deg, $brand-color 0%, shade($brand-color,2%) 100%);
+
+// border radius
 $r:4px;
 $r-btn:6px;
 
@@ -36,6 +42,16 @@ $smallMobileBreakpoint: 330;
 $mobileBreakpoint: 600;
 $removeMobileMenuBreakPoint: 900;
 $largeBreakpoint: 1200;
+$hamburgerTransition: all 150ms ease;
 
 // Shadows
-$block-shadow: 0 2px 4px rgba($font-color, 0.05);
+$block-shadow: 0 1px 2px rgba($black,.04), 0 2px 10px rgba($black, 0.08);
+$block-shadow-large: 0 2px 4px rgba($brand-color, 0.05), 0 12px 40px rgba($brand-color, 0.1);
+$input-shadow: 0 2px 0 rgba($black,.02), 0 1px 4px rgba($black, 0.1);
+
+// Social Media Colors
+$facebook-color: #3b5998;
+$twitter-color: #4099ff;
+$linkedin-color: #0077b5;
+$youtube-color: #ff0000;
+$instagram-color: #bc2a8d;
